@@ -53,4 +53,4 @@ pockyt.offSubscriber();
 ```
 
 * Please refer to the example for detailed usage instructions
-  [example code](https://github.com/yuansfer/flutter_sdk/example/lib/main.dart)
+  [example code](https://github.com/yuansfer/flutter_sdk/blob/main/example/lib/main.dart)

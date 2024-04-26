@@ -33,7 +33,7 @@ abstract class FlutterSdkPlatform extends PlatformInterface {
     required String appId,
     String? universalLink,
   }) async {
-    throw UnimplementedError('registerWXApi() has not been implemented.');
+    throw UnimplementedError('registerWechatApi() has not been implemented.');
   }
 
   Future<bool> isWechatInstalled() async {

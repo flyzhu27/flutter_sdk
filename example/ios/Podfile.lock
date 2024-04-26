@@ -1,0 +1,39 @@
+PODS:
+  - AlipaySDK-iOS (15.8.16)
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+  - pockyt_pay (0.5.0):
+    - AlipaySDK-iOS (~> 15.8.16)
+    - Flutter
+    - WechatOpenSDK-XCFramework (~> 2.0.4)
+  - WechatOpenSDK-XCFramework (2.0.4)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - pockyt_pay (from `.symlinks/plugins/pockyt_pay/ios`)
+
+SPEC REPOS:
+  trunk:
+    - AlipaySDK-iOS
+    - WechatOpenSDK-XCFramework
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+  pockyt_pay:
+    :path: ".symlinks/plugins/pockyt_pay/ios"
+
+SPEC CHECKSUMS:
+  AlipaySDK-iOS: 5e6011fbd546e7db6b43c1f527d164ee63f3d7cb
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  integration_test: 13825b8a9334a850581300559b8839134b124670
+  pockyt_pay: e2f2850baf7ca1357d61e90a97048dd32d651d2f
+  WechatOpenSDK-XCFramework: 36fb2bea0754266c17184adf4963d7e6ff98b69f
+
+PODFILE CHECKSUM: 6e700dec67e6deac9b1c69bb14c49a2217a12d15
+
+COCOAPODS: 1.15.2

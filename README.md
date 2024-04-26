@@ -1,6 +1,6 @@
 ## Introduction
 
-[![pub package](https://img.shields.io/badge/pub-v0.6.0-blue)](https://pub.dev/packages/pockyt_pay)
+[![pub package](https://img.shields.io/badge/pub-v0.6.0-blue)](https://pub.dev/packages/pockyt_pay)  
 `pockyt_pay` is a flutter plugin for Wechat Pay and Alipay.
 
 ## Getting Started

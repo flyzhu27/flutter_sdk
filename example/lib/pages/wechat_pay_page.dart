@@ -41,7 +41,7 @@ class _WechatPayPageState extends State<WechatPayPage> {
   }
 
   void subscribeRespEvent() {
-    pockyt.onSubscriber<WechatPayResp>((resp) {
+    pockyt.subscribe<WechatPayResp>((resp) {
       showResultBuffer.writeln("${++logIndex}.paid:${resp.isSuccessful}"
           ", cancelled:${resp.isCancelled}, result:$resp");
       setState(() {
@@ -54,7 +54,7 @@ class _WechatPayPageState extends State<WechatPayPage> {
     _merchantNoController.dispose();
     _storeNoController.dispose();
     _amountController.dispose();
-    pockyt.offSubscriber();
+    pockyt.unsubscribe();
     super.dispose();
   }
 

@@ -43,15 +43,15 @@ class _WechatAliPayPageState extends State<WechatAliPayPage> {
   }
 
   void subscribeRespEvent() {
-    pockyt.onSubscriber<BaseResp>((resp) {
+    pockyt.subscribe<BaseResp>((resp) {
       if (resp is WechatPayResp) {
-        var payResp = resp as WechatPayResp;
-        showResultBuffer.writeln("${++logIndex}.paid:${payResp.isSuccessful}"
-            ", cancelled:${payResp.isCancelled}, result:$resp");
+        // Wechat Pay result
+        showResultBuffer.writeln("${++logIndex}.paid:${resp.isSuccessful}"
+            ", cancelled:${resp.isCancelled}, result:$resp");
       } else if (resp is AlipayResp) {
-        var payResp = resp as AlipayResp;
-        showResultBuffer.writeln("${++logIndex}.paid:${payResp.isSuccessful}"
-            ", cancelled:${payResp.isCancelled}, result:$resp");
+        // Alipay result
+        showResultBuffer.writeln("${++logIndex}.paid:${resp.isSuccessful}"
+            ", cancelled:${resp.isCancelled}, result:$resp");
       }
       setState(() {
       });
@@ -63,7 +63,7 @@ class _WechatAliPayPageState extends State<WechatAliPayPage> {
     _merchantNoController.dispose();
     _storeNoController.dispose();
     _amountController.dispose();
-    pockyt.offSubscriber();
+    pockyt.unsubscribe();
     super.dispose();
   }
 

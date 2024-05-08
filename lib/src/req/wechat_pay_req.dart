@@ -1,7 +1,6 @@
 import 'base_req.dart';
 
 class WechatPayReq extends BaseReq {
-
   final String appId;
   final String partnerId;
   final String prepayId;

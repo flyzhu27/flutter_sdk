@@ -40,7 +40,7 @@ class _AlipayPageState extends State<AlipayPage> {
   }
 
   void _subscribeRespEvent() {
-    pockyt.onSubscriber<AlipayResp>((resp) {
+    pockyt.subscribe<AlipayResp>((resp) {
       showResultBuffer.writeln("${++logIndex}.paid:${resp.isSuccessful}"
           ", cancelled:${resp.isCancelled}, result:$resp");
       setState(() {
@@ -53,7 +53,7 @@ class _AlipayPageState extends State<AlipayPage> {
     _merchantNoController.dispose();
     _storeNoController.dispose();
     _amountController.dispose();
-    pockyt.offSubscriber();
+    pockyt.unsubscribe();
     super.dispose();
   }
 

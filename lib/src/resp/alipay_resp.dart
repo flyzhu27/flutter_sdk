@@ -1,18 +1,22 @@
 import 'package:pockyt_pay/src/resp/base_resp.dart';
 
 class AlipayResp extends BaseResp {
-
-  // Success, generally should be based on the asynchronous notifications or query results received by the server.
+  /// Success, generally should be based on the asynchronous notifications or query results received by the server.
   static const String errorCodeSuccess = "9000";
-  // Order processing, please wait
+
+  /// Order processing, please wait
   static const String errorCodePending = "8000";
-  // Failure, generally due to the user's payment failure
+
+  /// Failure, generally due to the user's payment failure
   static const String errorCodePayFail = "4000";
-  // Duplicate request
+
+  /// Duplicate request
   static const String errorCodeDuplicateRequest = "5000";
-  // User cancels payment
+
+  /// User cancels payment
   static const String errorCodeUserCancel = "6001";
-  // Network error
+
+  /// Network error
   static const String errorCodeNoConnection = "6002";
 
   final String? memo;
@@ -43,5 +47,4 @@ class AlipayResp extends BaseResp {
   bool get isSuccessful => respCode == errorCodeSuccess;
 
   bool get isCancelled => respCode == errorCodeUserCancel;
-
 }

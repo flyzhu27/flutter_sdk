@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 abstract class BaseResp {
-
   final String respCode;
   final String? respMsg;
 

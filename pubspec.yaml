@@ -1,6 +1,6 @@
 name: pockyt_pay
 description: "A flutter payment plugin that supports both Wechat Pay and Alipay"
-version: 0.6.0
+version: 0.6.2
 repository: https://github.com/yuansfer/flutter_sdk
 homepage: https://github.com/yuansfer/flutter_sdk
 

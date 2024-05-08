@@ -1,6 +1,6 @@
 ## Introduction
 
-[![pub package](https://img.shields.io/badge/pub-v0.6.0-blue)](https://pub.dev/packages/pockyt_pay)  
+[![pub package](https://img.shields.io/badge/pub-v0.6.2-blue)](https://pub.dev/packages/pockyt_pay)  
 `pockyt_pay` is a flutter plugin for Wechat Pay and Alipay.
 
 ## Getting Started
@@ -14,7 +14,7 @@
 * Configure the plugin in the `pubspec.yaml` file.
 ```yaml
 dependencies:
-  pockyt_pay: ^${lastest_version}
+  pockyt_pay: ^${lastest version}
   
 pockyt:
   app_id: ${wechat app id}
@@ -28,7 +28,7 @@ pockyt:
 # step.1 Install missing dependencies
 sudo gem install plist
 
-# step.2 Enter iOS folder(example/ios/,ios/)
+# step.2 Enter iOS folder(example/ios/)
 cd example/ios/
 
 # step.3 Execute
@@ -37,21 +37,21 @@ pod install
 
 ## How to use
 
-* Only four steps are needed to complete the payment call
+* Only four steps are needed to complete the payment call.
 ```dart
 // Create a PockytPay instance
 PockytPay pockyt = PockytPay();
 
 // Subscribe to payment result events
-pockyt.onSubscriber();
+pockyt.subscribe();
 
 // Request Alipay or Wechat Pay
 pockyt.requestAlipay();
 pockyt.requestWechatPay();
 
 // Cancel subscription
-pockyt.offSubscriber();
+pockyt.unsubscribe();
 ```
 
-* Please refer to the example for detailed usage instructions
+* Please refer to the example for detailed usage instructions.
   [example code](https://github.com/yuansfer/flutter_sdk/blob/main/example/lib/main.dart)

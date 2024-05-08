@@ -10,6 +10,7 @@ abstract class FlutterSdkPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
+  /// An abstract class representing the Flutter SDK platform.
   static FlutterSdkPlatform _instance = MethodChannelFlutterSdk();
 
   /// The default instance of [FlutterSdkPlatform] to use.
@@ -25,10 +26,16 @@ abstract class FlutterSdkPlatform extends PlatformInterface {
     _instance = instance;
   }
 
+  /// Returns a stream of [BaseResp] representing response events.
   Stream<BaseResp> get responseEventHandler {
     throw UnimplementedError('responseEventHandler has not been implemented.');
   }
 
+  /// Registers the WeChat API.
+  ///
+  /// The [appId] parameter is the WeChat app ID.
+  /// The [universalLink] parameter is the universal link for iOS (required on iOS).
+  /// Returns a [Future] that completes with a boolean value indicating if the registration was successful.
   Future<bool> registerWechatApi({
     required String appId,
     String? universalLink,
@@ -36,24 +43,38 @@ abstract class FlutterSdkPlatform extends PlatformInterface {
     throw UnimplementedError('registerWechatApi() has not been implemented.');
   }
 
+  /// Checks if WeChat APP is installed on the device.
+  ///
+  /// Returns a [Future] that completes with a boolean value indicating if WeChat is installed.
   Future<bool> isWechatInstalled() async {
     throw UnimplementedError('isWechatInstalled() has not been implemented.');
   }
 
+  /// Checks if Alipay APP is installed on the device.
+  ///
+  /// Returns a [Future] that completes with a boolean value indicating if Alipay is installed.
   Future<bool> isAlipayInstalled() async {
     throw UnimplementedError('isAlipayInstalled() has not been implemented.');
   }
 
+  /// Requests a WeChat payment.
+  ///
+  /// The [req] parameter is the WeChat payment request.
   Future<void> requestWechatPay(WechatPayReq req) {
     throw UnimplementedError('requestWechatPay() has not been implemented.');
   }
 
+  /// Requests an Alipay payment.
+  ///
+  /// The [payInfo] parameter is the Alipay payment information.
   Future<void> requestAlipay(String payInfo) {
     throw UnimplementedError('requestAliPay() has not been implemented.');
   }
 
+  /// Sets the Alipay sandbox environment.
+  ///
+  /// Throws an exception if the method is called on a non-Android platform.
   Future<void> setAlipaySandboxEnv() {
     throw UnimplementedError('setAlipaySandboxEnv() has not been implemented.');
   }
-
 }
